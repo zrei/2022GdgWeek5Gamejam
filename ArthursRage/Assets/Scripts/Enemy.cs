@@ -30,6 +30,9 @@ public class Enemy : MonoBehaviour
     {
         if (isMoving) {
             transform.Translate(velocity * Time.deltaTime);
+            if (Mathf.Abs(transform.position.x) > 11 || Mathf.Abs(transform.position.y) > 11) {
+                Destroy(this.gameObject);
+            }
         }
     }
 
