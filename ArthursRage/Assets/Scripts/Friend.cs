@@ -7,6 +7,8 @@ public class Friend : MonoBehaviour
     [SerializeField] private float speed;
     public Vector2 velocity;
     
+    private SpriteRenderer spriteRenderer;
+
     public void setVelocity(Vector2 v) {
         velocity = v;
     }
@@ -16,6 +18,9 @@ public class Friend : MonoBehaviour
     {
         velocity.Normalize();
         velocity *= speed;
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.flipX = velocity.x < 0;
     }
 
     // Update is called once per frame
