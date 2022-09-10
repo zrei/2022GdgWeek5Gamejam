@@ -13,7 +13,8 @@ public class SwordInteraction : MonoBehaviour
     //private int origScaleX;
     //private int origScaleY; 
 
-    //public int maxEnem;
+    public int maxEnem;
+    private int currExp = 0;
     public GameObject SwordParent;
     private Transform parentTransform;
 
@@ -23,7 +24,10 @@ public class SwordInteraction : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Enemy")) {
             killed += 1;
-            parentTransform.localScale = new Vector3(parentTransform.localScale.x * 1.2f, parentTransform.localScale.y * 1.2f, parentTransform.localScale.z);
+            if (currExp <= maxEnem) {
+                parentTransform.localScale = new Vector3(parentTransform.localScale.x * 1.2f, parentTransform.localScale.y * 1.2f, parentTransform.localScale.z);
+                currExp += 1;
+            }
             enemiesText.text = "Enemies Killed: " + killed;
         }
     }

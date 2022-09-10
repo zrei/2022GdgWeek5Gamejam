@@ -13762,6 +13762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesText: {fileID: 1979246630}
+  maxEnem: 6
   SwordParent: {fileID: 1532558543}
 --- !u!114 &1622994592
 MonoBehaviour:
