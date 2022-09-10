@@ -14,12 +14,15 @@ public class ArthurMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private BoxCollider2D collider;
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
 
-    // Start is called before the first frame update
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -30,10 +33,13 @@ public class ArthurMovement : MonoBehaviour
 
         rb.velocity = new Vector2(horizDirection * moveSpeed, vertDirection * moveSpeed);
 
-        /*if (horizDirection > 0) {
-            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
-        } else if (horizDirection < 0) {
-            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-        }*/
+        if (horizDirection != 0 || vertDirection != 0) {
+            animator.SetFloat("Velocity", 1);
+            if (horizDirection != 0) {
+                spriteRenderer.flipX = horizDirection < 0;
+            }
+        } else {
+            animator.SetFloat("Velocity", 0);
+        }
     }
 }
