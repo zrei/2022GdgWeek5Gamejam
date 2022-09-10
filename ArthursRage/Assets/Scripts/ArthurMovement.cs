@@ -30,10 +30,10 @@ public class ArthurMovement : MonoBehaviour
 
         rb.velocity = new Vector2(horizDirection * moveSpeed, vertDirection * moveSpeed);
 
-        if (horizDirection > 0) {
+        /*if (horizDirection > 0) {
             transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
         } else if (horizDirection < 0) {
             transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-        }
+        }*/
     }
 }
