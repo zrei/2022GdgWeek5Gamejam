@@ -31,6 +31,7 @@ public class SwordInteraction : MonoBehaviour
                 }
             }
             enemiesText.text = "Enemies Killed: " + killed;
+            GameObject.FindGameObjectWithTag("ScoreHolder").GetComponent<ScoreHolder>().setScore(killed);
         }
     }
 }
