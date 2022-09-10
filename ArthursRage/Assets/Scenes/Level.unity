@@ -13038,7 +13038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Friend: {fileID: 1066036831481474593, guid: ed0643adb9cc849c492ad45f02c9fb0d, type: 3}
   Enemy: {fileID: 1652595588480884157, guid: 8f696d8b57b984d0a9f71bbbee8415ed, type: 3}
-  spawnTime: 1e+10
+  spawnTime: 1
   XMin: -10
   XMax: 10
   YMin: -10
