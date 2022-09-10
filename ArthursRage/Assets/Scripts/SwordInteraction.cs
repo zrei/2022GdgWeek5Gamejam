@@ -2,26 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class SwordInteraction : MonoBehaviour
 {
+    private int killed = 0;
     private Animator animator;
-    void Awake()
-    {
-        //animator = GetComponent<Animator>();
-    }
+    public TMP_Text enemiesText;
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Enemy")) {
-            //animator.SetBool("isDead", true);
-            //Debug.Log(animator.GetCurrentAnimatorStateInfo(0).shortNameHash);
-            //while(animator.GetCurrentAnimatorStateInfo(0).IsName("arthur_death")) {
-//
-  //          }
- 
-            //Debug.Log(animator.GetCurrentAnimatorStateInfo(0).name);
-            
-            
+            killed += 1;
+            enemiesText.text = "Enemies Killed: " + killed;
             Destroy(other.gameObject);
         }  else if (other.gameObject.CompareTag("Queen")) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
