@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ArthurDeath : MonoBehaviour
 {
     private Animator animator;
+
     void Awake()
     {
         animator = GetComponent<Animator>();
@@ -13,20 +14,16 @@ public class ArthurDeath : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Enemy")) {
-            animator.SetBool("isDead", true);
-            //Debug.Log(animator.GetCurrentAnimatorStateInfo(0).shortNameHash);
-            //while(animator.GetCurrentAnimatorStateInfo(0).IsName("arthur_death")) {
-//
-  //          }
- 
-            //Debug.Log(animator.GetCurrentAnimatorStateInfo(0).name);
-            
-            
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            animator.SetTrigger("Death");
         } 
         /*else if (other.gameObject.CompareTag("Queen")) {
             Debug.Log("You killed the queen :(");
         }*/
     }
 
+    void Update() {
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("arthur_dead")) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
 }
