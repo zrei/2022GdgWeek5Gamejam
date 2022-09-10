@@ -3303,6 +3303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 1652595588480884157, guid: 8f696d8b57b984d0a9f71bbbee8415ed, type: 3}
+  enemySpawnTime: 2
   XMin: -5
   XMax: 3
   YMin: -3
