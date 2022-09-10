@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject Friend;
-    public GameObject Enemy;
+    public List<GameObject> Enemy;
     [SerializeField] private float spawnTime;
     private float enemySpawnCountdown;
 
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
         if (spawnEnemy) {
-            GameObject enemy = Instantiate(Enemy);
+            GameObject enemy = Instantiate(Enemy[Random.Range(0, Enemy.Count)]);
             enemy.transform.SetPositionAndRotation(pos, new Quaternion());
             enemy.GetComponent<Enemy>().setVelocity(velocity);
         } else {
