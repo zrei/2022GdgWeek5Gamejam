@@ -1568,7 +1568,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 9.40625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2961,6 +2961,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1532558544}
   - component: {fileID: 1532558545}
+  - component: {fileID: 1532558546}
+  - component: {fileID: 1532558548}
+  - component: {fileID: 1532558547}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Sword
@@ -2997,6 +3000,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arthur: {fileID: 400260035}
+--- !u!114 &1532558546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532558543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f7eb2a9d53b204299a126e8432afbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+--- !u!95 &1532558547
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532558543}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4754da4ea9c9cb64dbb1faf7dbeb881b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1532558548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532558543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c51a347e919604087c83c590f069bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1572860683
 GameObject:
   m_ObjectHideFlags: 0
@@ -3111,6 +3159,8 @@ GameObject:
   - component: {fileID: 1622994588}
   - component: {fileID: 1622994589}
   - component: {fileID: 1622994591}
+  - component: {fileID: 1622994592}
+  - component: {fileID: 1622994593}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Sword
@@ -3245,6 +3295,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesText: {fileID: 1979246630}
+--- !u!114 &1622994592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622994585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c51a347e919604087c83c590f069bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1622994593
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622994585}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dd2f3bb7c2592cc49b745c48242a66dc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1894426931
 GameObject:
   m_ObjectHideFlags: 0
