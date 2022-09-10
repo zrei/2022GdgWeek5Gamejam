@@ -15,6 +15,7 @@ public class QueenDeath : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Sword")) {
             animator.SetTrigger("Dead");
+            this.GetComponent<Friend>().die();
         }
     }
 

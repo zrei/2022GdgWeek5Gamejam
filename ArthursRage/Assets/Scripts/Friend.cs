@@ -6,6 +6,7 @@ public class Friend : MonoBehaviour
 {
     [SerializeField] private float speed;
     public Vector2 velocity;
+    private bool isMoving = true;
     
     private SpriteRenderer spriteRenderer;
 
@@ -26,6 +27,13 @@ public class Friend : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(velocity);
+        if (isMoving) {
+            transform.Translate(velocity * Time.deltaTime);
+        }
+    }
+
+    public void die()
+    {
+        isMoving = false;
     }
 }

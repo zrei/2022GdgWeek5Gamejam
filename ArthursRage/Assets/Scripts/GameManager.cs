@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
     {
         enemySpawnCountdown -= Time.deltaTime;
         if (enemySpawnCountdown <= 0) {
-            spawnEntity(Random.Range(0, 2) == 0);
+            spawnEntity(Random.Range(0, 5) != 0);
             enemySpawnCountdown = spawnTime;
         }
     }

@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     
     [SerializeField] private float speed;
     private Vector2 velocity;
+    private bool isMoving = true;
     
     private SpriteRenderer spriteRenderer;
 
@@ -27,6 +28,13 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(velocity);
+        if (isMoving) {
+            transform.Translate(velocity * Time.deltaTime);
+        }
+    }
+
+    public void die()
+    {
+        isMoving = false;
     }
 }
