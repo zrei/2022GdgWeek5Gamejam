@@ -15,8 +15,6 @@ public class SwordInteraction : MonoBehaviour
             killed += 1;
             enemiesText.text = "Enemies Killed: " + killed;
             Destroy(other.gameObject);
-        }  else if (other.gameObject.CompareTag("Queen")) {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

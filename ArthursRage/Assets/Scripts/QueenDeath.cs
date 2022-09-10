@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ArthurDeath : MonoBehaviour
+public class QueenDeath : MonoBehaviour
 {
     private Animator animator;
 
@@ -13,13 +13,15 @@ public class ArthurDeath : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Enemy")) {
-            animator.SetTrigger("Death");
+        if (other.gameObject.CompareTag("Sword")) {
+            animator.SetTrigger("Dead");
         }
     }
 
-    void Update() {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("arthur_dead")) {
+    // Update is called once per frame
+    void Update()
+    {
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("guinevere_dead")) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
