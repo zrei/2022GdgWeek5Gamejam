@@ -22,8 +22,10 @@ public class SwordInteraction : MonoBehaviour
         parentTransform = SwordParent.GetComponent<Transform>();
     }
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Enemy")) {
+        if (other.gameObject.CompareTag("Enemy") && other.gameObject.GetComponent<Enemy>().isAlive) {
             killed += 1;
+            other.gameObject.GetComponent<Enemy>().die();
+            other.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             if (currExp < maxEnem) {
                 currExp += 1;
                 if (currExp % 3 == 0) {
