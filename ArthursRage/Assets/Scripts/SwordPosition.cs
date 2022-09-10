@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SwordPosition : MonoBehaviour
 {
+    public GameObject Arthur;
     public float speed = 1.0f;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,7 @@ public class SwordPosition : MonoBehaviour
     {
         Vector3 mouse = Input.mousePosition;
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(new Vector3 (mouse.x, mouse.y,transform.position.z));
-        Vector3 targetDirection = mouseWorld - transform.position;
+        Vector3 targetDirection = mouseWorld - Arthur.transform.position;
             // The step size is equal to speed times frame time.
         float singleStep = speed * Time.deltaTime;
         // Rotate the forward vector towards the target direction by one step
