@@ -24,9 +24,11 @@ public class SwordInteraction : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Enemy")) {
             killed += 1;
-            if (currExp <= maxEnem) {
-                parentTransform.localScale = new Vector3(parentTransform.localScale.x * 1.2f, parentTransform.localScale.y * 1.2f, parentTransform.localScale.z);
+            if (currExp < maxEnem) {
                 currExp += 1;
+                if (currExp % 3 == 0) {
+                    parentTransform.localScale = new Vector3(parentTransform.localScale.x * 1.2f, parentTransform.localScale.y * 1.2f, parentTransform.localScale.z);
+                }
             }
             enemiesText.text = "Enemies Killed: " + killed;
         }
