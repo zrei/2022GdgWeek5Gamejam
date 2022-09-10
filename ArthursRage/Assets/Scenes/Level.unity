@@ -4744,6 +4744,7 @@ GameObject:
   - component: {fileID: 727875694}
   - component: {fileID: 727875693}
   - component: {fileID: 727875695}
+  - component: {fileID: 727875696}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -4761,7 +4762,7 @@ Animator:
   m_GameObject: {fileID: 727875692}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e760beead7fa0674799a097cddd6b17d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4754da4ea9c9cb64dbb1faf7dbeb881b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4799,6 +4800,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8c51a347e919604087c83c590f069bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &727875696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727875692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60f7eb2a9d53b204299a126e8432afbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &948036174
 GameObject:
   m_ObjectHideFlags: 0
@@ -12640,7 +12654,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1532558544}
   - component: {fileID: 1532558545}
-  - component: {fileID: 1532558546}
   - component: {fileID: 1532558548}
   - component: {fileID: 1532558547}
   m_Layer: 0
@@ -12679,19 +12692,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arthur: {fileID: 400260035}
---- !u!114 &1532558546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532558543}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60f7eb2a9d53b204299a126e8432afbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
 --- !u!95 &1532558547
 Animator:
   serializedVersion: 4
@@ -12700,9 +12700,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532558543}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4754da4ea9c9cb64dbb1faf7dbeb881b, type: 2}
+  m_Controller: {fileID: 9100000, guid: e760beead7fa0674799a097cddd6b17d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -12995,7 +12995,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622994585}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: dd2f3bb7c2592cc49b745c48242a66dc, type: 2}
   m_CullingMode: 0
@@ -13038,7 +13038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Friend: {fileID: 1066036831481474593, guid: ed0643adb9cc849c492ad45f02c9fb0d, type: 3}
   Enemy: {fileID: 1652595588480884157, guid: 8f696d8b57b984d0a9f71bbbee8415ed, type: 3}
-  spawnTime: 1
+  spawnTime: 1e+10
   XMin: -10
   XMax: 10
   YMin: -10
