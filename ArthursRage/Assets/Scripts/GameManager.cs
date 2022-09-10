@@ -5,8 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject Enemy;
-    public const float ENEMY_SPAWN_TIME = 1f;
-    private float enemySpawnCountdown = ENEMY_SPAWN_TIME;
+    [SerializeField] private float enemySpawnTime;
+    private float enemySpawnCountdown;
 
     public float XMin;
     public float XMax;
@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        enemySpawnCountdown = enemySpawnTime;
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         enemySpawnCountdown -= Time.deltaTime;
         if (enemySpawnCountdown <= 0) {
             GameObject newEnemy = Instantiate(Enemy);
-            enemySpawnCountdown = ENEMY_SPAWN_TIME;
+            enemySpawnCountdown = enemySpawnTime;
             newEnemy.transform.SetPositionAndRotation(
                 generateRandomSpawnPosition(),
                 new Quaternion());
