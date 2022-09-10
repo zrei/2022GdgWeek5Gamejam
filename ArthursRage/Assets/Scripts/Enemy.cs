@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float speed;
     private Vector2 velocity;
     
+    private SpriteRenderer spriteRenderer;
+
     public void setVelocity(Vector2 v) {
         velocity = v;
     }
@@ -17,6 +19,9 @@ public class Enemy : MonoBehaviour
     {
         velocity.Normalize();
         velocity *= speed;
+        
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.flipX = velocity.x < 0;
     }
 
     // Update is called once per frame
