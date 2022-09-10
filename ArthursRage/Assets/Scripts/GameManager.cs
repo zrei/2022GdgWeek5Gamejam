@@ -14,16 +14,35 @@ public class GameManager : MonoBehaviour
     public float YMin;
     public float YMax;
 
-    Vector2 generateRandomSpawnPosition() {
+    void spawnEntity(bool spawnEnemy) {
+        Vector2 pos;
+        Vector2 velocity;
         switch (Random.Range(0, 4)) {
             case 0:
-                return new Vector2(Random.Range(XMin, XMax), YMax);
+                pos = new Vector2(Random.Range(XMin, XMax), YMax);
+                velocity = new Vector2(Random.Range(XMin, XMax), YMin) - pos;
+                break;
             case 1:
-                return new Vector2(XMax, Random.Range(YMin, YMax));
+                pos = new Vector2(XMax, Random.Range(YMin, YMax));
+                velocity = new Vector2(XMin, Random.Range(YMin, YMax)) - pos;
+                break;
             case 2:
-                return new Vector2(Random.Range(XMin, XMax), YMin);
+                pos = new Vector2(Random.Range(XMin, XMax), YMin);
+                velocity = new Vector2(Random.Range(XMin, XMax), YMax) - pos;
+                break;
             default:
-                return new Vector2(XMin, Random.Range(YMin, YMax));
+                pos = new Vector2(XMin, Random.Range(YMin, YMax));
+                velocity = new Vector2(XMax, Random.Range(YMin, YMax)) - pos;
+                break;
+        }
+        if (spawnEnemy) {
+            GameObject enemy = Instantiate(Enemy);
+            enemy.transform.SetPositionAndRotation(pos, new Quaternion());
+            enemy.GetComponent<Enemy>().setVelocity(velocity);
+        } else {
+            GameObject friend = Instantiate(Friend);
+            friend.transform.SetPositionAndRotation(pos, new Quaternion());
+            friend.GetComponent<Friend>().setVelocity(velocity);
         }
     }
 
@@ -38,11 +57,8 @@ public class GameManager : MonoBehaviour
     {
         enemySpawnCountdown -= Time.deltaTime;
         if (enemySpawnCountdown <= 0) {
-            GameObject newObject = Random.Range(0, 2) == 0 ? Instantiate(Enemy) : Instantiate(Friend);
+            spawnEntity(Random.Range(0, 2) == 0);
             enemySpawnCountdown = spawnTime;
-            newObject.transform.SetPositionAndRotation(
-                generateRandomSpawnPosition(),
-                new Quaternion());
         }
     }
 }

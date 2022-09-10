@@ -5,11 +5,15 @@ using UnityEngine;
 public class Friend : MonoBehaviour
 {
     [SerializeField] private float speed;
-    private Vector2 velocity;
+    public Vector2 velocity;
+    
+    public void setVelocity(Vector2 v) {
+        velocity = v;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        velocity = new Vector2(-transform.position.x, -transform.position.y); 
         velocity.Normalize();
         velocity *= speed;
     }
