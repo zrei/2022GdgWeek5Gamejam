@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 68c3fd08bce96734394c66e2a1d5ac6c
+guid: b41fbd059a2f3134c89d893e78a80657
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: countdown_0
+      name: arthur_run_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
-        width: 12
-        height: 12
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76b2300b9d493c24eb8fba3849354987
-      internalID: -1211214368
+      spriteID: 627b1a5f126fa5243be052166108a60a
+      internalID: 1091415782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: countdown_1
+      name: arthur_run_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 2
-        width: 12
-        height: 12
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9ac05658f653e0469eea00f89af6e0b
-      internalID: -1569382616
+      spriteID: a8c520040ea6a5244813ed8ac05c6cec
+      internalID: -1762790934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: countdown_2
+      name: arthur_run_2
       rect:
         serializedVersion: 2
-        x: 34
-        y: 2
-        width: 12
-        height: 12
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de748a42707009f4e9644031fa8ec6ed
-      internalID: 99975975
+      spriteID: 2bbd0112c270ef843bfe8806951f0321
+      internalID: 1794178144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: countdown_3
+      name: arthur_run_3
       rect:
         serializedVersion: 2
-        x: 50
-        y: 2
-        width: 12
-        height: 12
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0216285de48626448a8e23aaacf89bcc
-      internalID: 1600622188
+      spriteID: 5cd8b15c9d8e1464188179666ac70c24
+      internalID: 849574019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: countdown_4
+      name: arthur_run_4
       rect:
         serializedVersion: 2
-        x: 66
-        y: 2
-        width: 12
-        height: 12
+        x: 128
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a73780eb7d4d5d4385ff48828f4d53a
-      internalID: -1313123291
+      spriteID: 7f713f98aa91ca942a0ad6d697689c85
+      internalID: 1995669818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: countdown_5
+      name: arthur_run_5
       rect:
         serializedVersion: 2
-        x: 82
-        y: 2
-        width: 12
-        height: 12
+        x: 160
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cc58496342fc394c93769ff276c1ecb
-      internalID: -227363576
+      spriteID: 3197b640e720cdb4ca9daec62b7dc224
+      internalID: 556030391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: countdown_6
+      name: arthur_run_6
       rect:
         serializedVersion: 2
-        x: 98
-        y: 2
-        width: 12
-        height: 12
+        x: 192
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cbaf7a263eaa5149a81d0e676fb9e27
-      internalID: 1396158134
+      spriteID: f1bb2d06e87a70a4391ed7b52f0f12ca
+      internalID: -99636208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: countdown_7
+      name: arthur_run_7
       rect:
         serializedVersion: 2
-        x: 114
-        y: 2
-        width: 12
-        height: 12
+        x: 224
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,92 +278,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7e3abf66b1937a49a1a71a33d87cf10
-      internalID: 43294161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: countdown_8
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 2
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d007d08e5f0948a44a00407aa343c9ef
-      internalID: -2019613742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: countdown_9
-      rect:
-        serializedVersion: 2
-        x: 146
-        y: 2
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 878c167aa1e781944a9ec00086215ce5
-      internalID: -1928108338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: countdown_10
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 2
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 610c0f939eb336543a7d3c585430d865
-      internalID: -1758578483
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: countdown_11
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 2
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dde76b9dd38b8e644bedbe2124cff766
-      internalID: -535971262
+      spriteID: 6bfed9984721eef45ab8c3e1b4b67e11
+      internalID: 214175472
       vertices: []
       indices: 
       edges: []
@@ -379,18 +295,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      countdown_11: -535971262
-      countdown_6: 1396158134
-      countdown_1: -1569382616
-      countdown_10: -1758578483
-      countdown_5: -227363576
-      countdown_9: -1928108338
-      countdown_4: -1313123291
-      countdown_7: 43294161
-      countdown_8: -2019613742
-      countdown_0: -1211214368
-      countdown_2: 99975975
-      countdown_3: 1600622188
+      arthur_run_7: 214175472
+      arthur_run_3: 849574019
+      arthur_run_6: -99636208
+      arthur_run_5: 556030391
+      arthur_run_4: 1995669818
+      arthur_run_2: 1794178144
+      arthur_run_0: 1091415782
+      arthur_run_1: -1762790934
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
