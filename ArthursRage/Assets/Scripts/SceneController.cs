@@ -8,4 +8,12 @@ public class SceneController : MonoBehaviour
     public void PlayButton() {
         SceneManager.LoadScene(1);
     }
+
+    public void ReplayButton() {
+        SceneManager.LoadScene(1);
+    }
+
+    public void MainMenuButton() {
+        SceneManager.LoadScene(0);
+    }
 }
