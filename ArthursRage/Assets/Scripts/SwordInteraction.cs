@@ -10,9 +10,20 @@ public class SwordInteraction : MonoBehaviour
     private Animator animator;
     public TMP_Text enemiesText;
 
+    //private int origScaleX;
+    //private int origScaleY; 
+
+    //public int maxEnem;
+    public GameObject SwordParent;
+    private Transform parentTransform;
+
+    void Awake() {
+        parentTransform = SwordParent.GetComponent<Transform>();
+    }
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Enemy")) {
             killed += 1;
+            parentTransform.localScale = new Vector3(parentTransform.localScale.x * 1.2f, parentTransform.localScale.y * 1.2f, parentTransform.localScale.z);
             enemiesText.text = "Enemies Killed: " + killed;
             Destroy(other.gameObject);
         }
