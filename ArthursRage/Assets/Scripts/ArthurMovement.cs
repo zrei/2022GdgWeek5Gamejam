@@ -13,14 +13,15 @@ public class ArthurMovement : MonoBehaviour
     private float vertDirection;
 
     private Rigidbody2D rb;
-    private BoxCollider2D collider;
+    private BoxCollider2D boxCollider;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private bool isMoving = true;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        collider = GetComponent<BoxCollider2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
@@ -31,7 +32,9 @@ public class ArthurMovement : MonoBehaviour
         horizDirection = Input.GetAxisRaw("Horizontal");
         vertDirection = Input.GetAxisRaw("Vertical");
 
-        rb.velocity = new Vector2(horizDirection * moveSpeed, vertDirection * moveSpeed);
+        if (isMoving) {
+            rb.velocity = new Vector2(horizDirection * moveSpeed, vertDirection * moveSpeed);
+        }
 
         if (horizDirection != 0 || vertDirection != 0) {
             animator.SetFloat("Velocity", 1);
@@ -41,5 +44,10 @@ public class ArthurMovement : MonoBehaviour
         } else {
             animator.SetFloat("Velocity", 0);
         }
+    }
+
+    public void die() {
+        isMoving = false;
+        rb.velocity = Vector2.zero;
     }
 }

@@ -15,6 +15,7 @@ public class ArthurDeath : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Enemy")) {
             animator.SetTrigger("Death");
+            this.GetComponent<ArthurMovement>().die();
         }
     }
 
