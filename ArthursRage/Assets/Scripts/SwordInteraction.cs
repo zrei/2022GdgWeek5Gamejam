@@ -25,7 +25,6 @@ public class SwordInteraction : MonoBehaviour
             killed += 1;
             parentTransform.localScale = new Vector3(parentTransform.localScale.x * 1.2f, parentTransform.localScale.y * 1.2f, parentTransform.localScale.z);
             enemiesText.text = "Enemies Killed: " + killed;
-            Destroy(other.gameObject);
         }
     }
 }
