@@ -9,7 +9,8 @@ public class ArthurMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
 
-    private float direction;
+    private float horizDirection;
+    private float vertDirection;
 
     private Rigidbody2D rb;
     private BoxCollider2D collider;
@@ -24,14 +25,15 @@ public class ArthurMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        direction = Input.GetAxisRaw("Horizontal");
+        horizDirection = Input.GetAxisRaw("Horizontal");
+        vertDirection = Input.GetAxisRaw("Vertical");
 
-        rb.velocity = new Vector2(direction * moveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(horizDirection * moveSpeed, vertDirection * moveSpeed);
 
-        if (direction > 0) {
-            transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
-        } else if (direction < 0) {
-            transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+        if (horizDirection > 0) {
+            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        } else if (horizDirection < 0) {
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
     }
 }
