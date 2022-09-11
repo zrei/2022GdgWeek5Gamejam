@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     
     [SerializeField] private float speed;
     private Vector2 velocity;
-    private bool isMoving = true;
+    public bool isAlive = true;
     
     private SpriteRenderer spriteRenderer;
 
@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isMoving) {
+        if (isAlive) {
             transform.Translate(velocity * Time.deltaTime);
             if (Mathf.Abs(transform.position.x) > 11 || Mathf.Abs(transform.position.y) > 11) {
                 Destroy(this.gameObject);
@@ -38,6 +38,6 @@ public class Enemy : MonoBehaviour
 
     public void die()
     {
-        isMoving = false;
+        isAlive = false;
     }
 }

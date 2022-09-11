@@ -14,8 +14,6 @@ public class EnemyDeath : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Sword")) {
             animator.SetTrigger("Dead");
-            this.GetComponent<Enemy>().die();
-            this.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 
